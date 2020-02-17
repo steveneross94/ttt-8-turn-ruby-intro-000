@@ -1,31 +1,3 @@
-Skip to content
-
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@steveneross94
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-alexisadorn
-/
-Tic-Tac-Toe-Ruby
-1
-0 11
- Code  Issues 0  Pull requests 0  Actions  Projects 0  Wiki  Security  Insights
-Tic-Tac-Toe-Ruby/ttt-8-turn-v-000/lib/turn.rb  /
-@alexisadorn alexisadorn Tic Tac Toe labs
-8f439e7 on Mar 28, 2017
-59 lines (53 sloc)  1.42 KB
-
-You're using code navigation to jump to definitions or references.
-Learn more or give us feedback
-#displays a tic tac toe board, with board spaces passed as an array
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -34,14 +6,12 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-#coverts a user's place on the board to the index integer
 def input_to_index(user_input)
   index = user_input.to_i
   index -= 1
   return index
 end
 
-#checks the number to see if 1) the position is already taken and 2)it is an actual number
 def valid_move?(board, index)
   def position_taken?(array, ind)
     if array[ind] == " " || array[ind] == "" || array[ind] == nil
@@ -66,13 +36,11 @@ def valid_move?(board, index)
   end
 end
 
-#Takes a users num and the board, and places the X or O char in that position
 def move(board, index, character = "X")
   board[index] = character
   return board
 end
 
-#Asks user for a number, check if it is valid, and if it's not, recursively continues to ask for a number
 def turn (board)
   puts "Please enter 1-9:"
   num = gets.chomp
