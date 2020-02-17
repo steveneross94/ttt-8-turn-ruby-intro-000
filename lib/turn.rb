@@ -29,7 +29,7 @@ def on_board?(number)
   end
 end
 
-if (position_taken?(array, index) == false) && (on_board(index) == true)
+if (position_taken?(array, index) == false) && (on_board?(index) == true)
   return true
 else
   return false
